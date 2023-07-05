@@ -3,7 +3,7 @@ object Form2: TForm2
   Top = 128
   Width = 585
   Height = 602
-  Caption = 'Form2'
+  Caption = 'Wali Kelas'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -69,13 +69,6 @@ object Form2: TForm2
     Width = 38
     Height = 13
     Caption = 'STATUS'
-  end
-  object lbl9: TLabel
-    Left = 56
-    Top = 24
-    Width = 11
-    Height = 13
-    Caption = 'ID'
   end
   object edt1: TEdit
     Left = 184
@@ -189,19 +182,12 @@ object Form2: TForm2
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
   end
-  object edt7: TEdit
-    Left = 184
-    Top = 16
-    Width = 121
-    Height = 21
-    TabOrder = 13
-  end
   object edt8: TEdit
     Left = 184
     Top = 264
     Width = 121
     Height = 21
-    TabOrder = 14
+    TabOrder = 13
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP

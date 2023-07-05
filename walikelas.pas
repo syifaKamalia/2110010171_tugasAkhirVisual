@@ -33,8 +33,6 @@ type
     ds1: TDataSource;
     zqry1: TZQuery;
     dbgrd1: TDBGrid;
-    lbl9: TLabel;
-    edt7: TEdit;
     edt8: TEdit;
     procedure bersih;
     procedure kondisiawal;
@@ -69,7 +67,6 @@ begin
   edt4.Clear;
   edt5.Clear;
   edt6.Clear;
-  edt7.Clear;
   edt8.Clear;
 end;
 
@@ -90,13 +87,11 @@ begin
   edt4.Enabled:= False;
   edt5.Enabled:= False;
   edt6.Enabled:= False;
-  edt7.Enabled:= False;
   edt8.Enabled:= False;
 end;
 
 procedure TForm2.editenable;
 begin
-  edt7.Enabled:= True;
   edt1.Enabled:= True;
   edt2.Enabled:= True;
   cbb1.Enabled:= True;
@@ -121,7 +116,11 @@ end;
 procedure TForm2.btn2Click(Sender: TObject);
 begin
 nik:=  zqry1.Fields[1].AsString;
-id:=  zqry1.Fields[0].AsString;
+
+if edt1.Text = nik then
+begin
+ShowMessage('NIK SUDAH ADA!');
+end else
 if edt1.Text ='' then
 begin
 ShowMessage('NIK TIDAK BOLEH KOSONG!');
@@ -154,21 +153,9 @@ if edt8.Text ='' then
 begin
 ShowMessage('STATUS TIDAK BOLEH KOSONG!');
 end else
-if edt7.Text ='' then
-begin
-ShowMessage('ID TIDAK BOLEH KOSONG!');
-end else
-if edt1.Text = nik then
-begin
-ShowMessage('NIK SUDAH ADA!');
-end else
-if edt7.Text = id then
-begin
-ShowMessage('ID SUDAH ADA!');
-end else
 begin
 zqry1.SQL.Clear; //simpan
-zqry1.SQL.Add('insert into tablewalikelas values("'+edt7.Text+'","'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+edt6.Text+'","'+edt8.Text+'")');
+zqry1.SQL.Add('insert into tablewalikelas values(null,"'+edt1.Text+'","'+edt2.Text+'","'+cbb1.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt5.Text+'","'+edt6.Text+'","'+edt8.Text+'")');
 zqry1.ExecSQL ;
 
 zqry1.SQL.Clear;
@@ -182,7 +169,7 @@ end;
 
 procedure TForm2.dbgrd1CellClick(Column: TColumn);
 begin
-edt7.Text:= zqry1.Fields[0].AsString;
+id:= zqry1.Fields[0].AsString; // DBGrid
 edt1.Text:= zqry1.Fields[1].AsString;
 edt2.Text:= zqry1.Fields[2].AsString;
 cbb1.Text:= zqry1.Fields[3].AsString;
@@ -202,7 +189,7 @@ end;
 
 procedure TForm2.btn3Click(Sender: TObject);
 begin
-  if (edt7.Text= '')or(edt1.Text= '')or (edt2.Text ='')or(cbb1.Text= '')or(edt3.Text= '')or (edt4.Text ='')or (edt5.Text ='')or (edt6.Text= '')or(edt8.Text= '') then
+  if (edt1.Text= '')or (edt2.Text ='')or(cbb1.Text= '')or(edt3.Text= '')or (edt4.Text ='')or (edt5.Text ='')or (edt6.Text= '')or(edt8.Text= '') then
 begin
 ShowMessage('INPUTAN WAJIB DIISI!');
 kondisiawal;
@@ -210,7 +197,7 @@ end else
 begin
 ShowMessage('DATA BERHASIL DIUPDATE!'); //UPDATE
 zqry1.SQL.Clear;
-zqry1.SQL.Add('Update tablewalikelas set nik="'+edt1.Text+'",nama="'+edt2.Text+'",jk="'+cbb1.Text+'",pendidikan="'+edt3.Text+'",telp="'+edt4.Text+'",matpel="'+edt5.Text+'",alamat="'+edt6.Text+'",status="'+edt8.Text+'" where id="'+edt7.Text+'"');
+zqry1.SQL.Add('Update tablewalikelas set nik="'+edt1.Text+'",nama="'+edt2.Text+'",jk="'+cbb1.Text+'",pendidikan="'+edt3.Text+'",telp="'+edt4.Text+'",matpel="'+edt5.Text+'",alamat="'+edt6.Text+'",status="'+edt8.Text+'" where id="'+id+'"');
 zqry1. ExecSQL;
 
 zqry1.SQL.Clear;
@@ -231,7 +218,7 @@ begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' delete from tablewalikelas where id="'+edt7.Text+'"');
+zqry1.SQL.Add(' delete from tablewalikelas where id="'+id+'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from tablewalikelas');
