@@ -11,7 +11,8 @@ uses
   hubungan in 'hubungan.pas' {Form8},
   semester in 'semester.pas' {Form9},
   admin in 'admin.pas' {Form10},
-  wakel in 'wakel.pas' {Form11};
+  wakel in 'wakel.pas' {Form11},
+  sswa in 'sswa.pas' {Form3};
 
 {$R *.res}
 
@@ -27,6 +28,7 @@ begin
   Application.CreateForm(TForm9, Form9);
   Application.CreateForm(TForm10, Form10);
   Application.CreateForm(TForm11, Form11);
+  Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.

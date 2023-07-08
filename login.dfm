@@ -1,6 +1,6 @@
 object Form10: TForm10
-  Left = 260
-  Top = 179
+  Left = 187
+  Top = 242
   Width = 928
   Height = 460
   Caption = 'login'
@@ -57,7 +57,6 @@ object Form10: TForm10
   end
   object zqry10: TZQuery
     Connection = Form2.con1
-    Active = True
     SQL.Strings = (
       'select * from tableuser')
     Params = <>

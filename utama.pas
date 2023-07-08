@@ -4,31 +4,20 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Menus;
+  Dialogs, StdCtrls, Menus, DB, ZAbstractRODataset, ZAbstractDataset,
+  ZDataset, ZAbstractConnection, ZConnection;
 
 type
   TForm1 = class(TForm)
-    mm1: TMainMenu;
-    mniMENU1: TMenuItem;
-    mniWALIKELAS1: TMenuItem;
-    mniSISWA1: TMenuItem;
-    mniORANGTUA1: TMenuItem;
-    mniUSER1: TMenuItem;
-    mniPOIN1: TMenuItem;
-    mniKELAS1: TMenuItem;
-    mniHUBUNGAN1: TMenuItem;
-    mniSEMESTER1: TMenuItem;
-    mnilogin1: TMenuItem;
+    lbl1: TLabel;
+    lbl2: TLabel;
+    edt1: TEdit;
+    edt2: TEdit;
+    btn1: TButton;
+    zqry: TZQuery;
+    ds: TDataSource;
+    con: TZConnection;
     procedure btn1Click(Sender: TObject);
-    procedure mniWALIKELAS1Click(Sender: TObject);
-    procedure mniSISWA1Click(Sender: TObject);
-    procedure mniORANGTUA1Click(Sender: TObject);
-    procedure mniUSER1Click(Sender: TObject);
-    procedure mniPOIN1Click(Sender: TObject);
-    procedure mniKELAS1Click(Sender: TObject);
-    procedure mniHUBUNGAN1Click(Sender: TObject);
-    procedure mniSEMESTER1Click(Sender: TObject);
-    procedure mnilogin1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,61 +26,54 @@ type
 
 var
   Form1: TForm1;
-
+  username:string;
+  password:string;
+  level:string;
 implementation
 
-uses walikelas, siswa, ortu, user, poin, kelas, hubungan, semester, login;
+uses admin, wakel;
 
 {$R *.dfm}
 
 procedure TForm1.btn1Click(Sender: TObject);
 begin
-Form2.Show;
-end;
-
-procedure TForm1.mniWALIKELAS1Click(Sender: TObject);
 begin
-Form2.Show;
-end;
+ username := edt1.Text;
+  password := edt2.Text;
 
-procedure TForm1.mniSISWA1Click(Sender: TObject);
-begin
-Form3.Show;
-end;
+  zqry := TZQuery.Create(nil);
+  try
+    zqry.Connection := con;
+    zqry.SQL.Text := 'SELECT level FROM tableuser WHERE username = :username AND password = :password';
+    zqry.ParamByName('username').AsString := username;
+    zqry.ParamByName('password').AsString := password;
+    zqry.Open;
 
-procedure TForm1.mniORANGTUA1Click(Sender: TObject);
-begin
-Form4.Show;
+    if not zqry.IsEmpty then
+    begin
+      level := zqry.FieldByName('level').AsString;
+      if level = 'admin' then
+      begin
+        // Pengguna berhasil login sebagai admin
+        ShowMessage('Admin login successful');
+        Form10.Show;
+      end
+      else if level = 'wali kelas' then
+      begin
+        // Pengguna berhasil login sebagai pengguna
+        ShowMessage('Wali kelas login successful');
+        Form11.Show;
+      end;
+    end
+    else
+    begin
+      // Informasi login tidak valid
+      ShowMessage('Invalid username or password');
+    end;
+  finally
+    zqry.Free;
+  end;
 end;
-
-procedure TForm1.mniUSER1Click(Sender: TObject);
-begin
-Form5.Show;
-end;
-
-procedure TForm1.mniPOIN1Click(Sender: TObject);
-begin
-Form6.Show;
-end;
-
-procedure TForm1.mniKELAS1Click(Sender: TObject);
-begin
-Form7.Show;
-end;
-
-procedure TForm1.mniHUBUNGAN1Click(Sender: TObject);
-begin
-     Form8.Show;
-end;
-
-procedure TForm1.mniSEMESTER1Click(Sender: TObject);
-begin
-  Form9.Show;
-end;
-
-procedure TForm1.mnilogin1Click(Sender: TObject);
-begin
-Form10.Show;
 end;
 
 end.
