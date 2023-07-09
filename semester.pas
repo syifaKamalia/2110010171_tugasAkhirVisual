@@ -5,7 +5,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  Grids, DBGrids, StdCtrls;
+  Grids, DBGrids, StdCtrls, frxClass, frxDBSet;
 
 type
   TForm9 = class(TForm)
@@ -33,6 +33,9 @@ type
     edt7: TEdit;
     lbl9: TLabel;
     edt8: TEdit;
+    btn6: TButton;
+    frxdbdtst8: TfrxDBDataset;
+    frxrprt8: TfrxReport;
     procedure bersih;
     procedure editenable;
     procedure kondisiawal;
@@ -43,6 +46,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -235,6 +239,11 @@ end;
 procedure TForm9.btn5Click(Sender: TObject);
 begin
     kondisiawal;
+end;
+
+procedure TForm9.btn6Click(Sender: TObject);
+begin
+frxrprt8.ShowReport;
 end;
 
 end.
