@@ -4,7 +4,7 @@ object Form6: TForm6
   Width = 587
   Height = 578
   Caption = 'Poin'
-  Color = clBtnFace
+  Color = clAppWorkSpace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -15,45 +15,81 @@ object Form6: TForm6
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 56
-    Top = 48
-    Width = 57
-    Height = 13
+    Left = 144
+    Top = 32
+    Width = 68
+    Height = 15
     Caption = 'NAMA POIN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object lbl2: TLabel
-    Left = 56
-    Top = 80
-    Width = 34
-    Height = 13
+    Left = 144
+    Top = 64
+    Width = 44
+    Height = 15
     Caption = 'BOBOT'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object lbl4: TLabel
-    Left = 56
-    Top = 112
-    Width = 28
-    Height = 13
+    Left = 144
+    Top = 96
+    Width = 34
+    Height = 15
     Caption = 'JENIS'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object lbl5: TLabel
-    Left = 56
-    Top = 144
-    Width = 38
-    Height = 13
+    Left = 144
+    Top = 128
+    Width = 46
+    Height = 15
     Caption = 'STATUS'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object edt1: TEdit
-    Left = 184
-    Top = 48
-    Width = 121
-    Height = 21
+    Left = 240
+    Top = 32
+    Width = 209
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
   end
   object edt2: TEdit
-    Left = 184
-    Top = 80
-    Width = 121
-    Height = 21
+    Left = 240
+    Top = 64
+    Width = 209
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object btn1: TButton
@@ -116,22 +152,34 @@ object Form6: TForm6
     OnCellClick = dbgrd1CellClick
   end
   object cbb1: TComboBox
-    Left = 184
-    Top = 112
-    Width = 121
-    Height = 21
-    ItemHeight = 13
+    Left = 240
+    Top = 96
+    Width = 209
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ItemHeight = 15
+    ParentFont = False
     TabOrder = 8
     Items.Strings = (
       'pelanggaran'
       'prestasi')
   end
   object cbb2: TComboBox
-    Left = 184
-    Top = 144
-    Width = 121
-    Height = 21
-    ItemHeight = 13
+    Left = 240
+    Top = 128
+    Width = 209
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ItemHeight = 15
+    ParentFont = False
     TabOrder = 9
     Items.Strings = (
       'true'

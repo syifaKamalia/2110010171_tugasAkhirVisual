@@ -4,7 +4,7 @@ object Form8: TForm8
   Width = 587
   Height = 574
   Caption = 'Hubungan'
-  Color = clBtnFace
+  Color = clAppWorkSpace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -15,57 +15,99 @@ object Form8: TForm8
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 56
-    Top = 48
-    Width = 47
-    Height = 13
+    Left = 72
+    Top = 32
+    Width = 53
+    Height = 15
     Caption = 'SISWA ID'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object lbl2: TLabel
-    Left = 56
-    Top = 80
-    Width = 42
-    Height = 13
+    Left = 72
+    Top = 64
+    Width = 50
+    Height = 15
     Caption = 'ORTU ID'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object lbl3: TLabel
-    Left = 56
-    Top = 112
-    Width = 91
-    Height = 13
+    Left = 72
+    Top = 96
+    Width = 110
+    Height = 15
     Caption = 'STATUS HUB ANAK'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object lbl4: TLabel
-    Left = 56
-    Top = 144
-    Width = 66
-    Height = 13
+    Left = 72
+    Top = 128
+    Width = 82
+    Height = 15
     Caption = 'KETERANGAN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object lbl5: TLabel
-    Left = 56
-    Top = 176
-    Width = 69
-    Height = 13
+    Left = 72
+    Top = 160
+    Width = 83
+    Height = 15
     Caption = 'STATUS ORTU'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object edt1: TEdit
-    Left = 184
-    Top = 48
-    Width = 121
-    Height = 21
+    Left = 200
+    Top = 32
+    Width = 289
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
   end
   object edt2: TEdit
-    Left = 184
-    Top = 80
-    Width = 121
-    Height = 21
+    Left = 200
+    Top = 64
+    Width = 289
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object btn1: TButton
     Left = 8
-    Top = 208
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'BARU'
@@ -74,7 +116,7 @@ object Form8: TForm8
   end
   object btn2: TButton
     Left = 104
-    Top = 208
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'SIMPAN'
@@ -83,7 +125,7 @@ object Form8: TForm8
   end
   object btn3: TButton
     Left = 200
-    Top = 208
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'EDIT'
@@ -92,7 +134,7 @@ object Form8: TForm8
   end
   object btn4: TButton
     Left = 296
-    Top = 208
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'HAPUS'
@@ -101,7 +143,7 @@ object Form8: TForm8
   end
   object btn5: TButton
     Left = 392
-    Top = 208
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'BATAL'
@@ -110,7 +152,7 @@ object Form8: TForm8
   end
   object dbgrd1: TDBGrid
     Left = 8
-    Top = 240
+    Top = 224
     Width = 553
     Height = 281
     DataSource = ds7
@@ -123,29 +165,47 @@ object Form8: TForm8
     OnCellClick = dbgrd1CellClick
   end
   object edt3: TEdit
-    Left = 184
-    Top = 112
-    Width = 121
-    Height = 21
+    Left = 200
+    Top = 96
+    Width = 289
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 8
   end
   object edt4: TEdit
-    Left = 184
-    Top = 144
-    Width = 121
-    Height = 21
+    Left = 200
+    Top = 128
+    Width = 289
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 9
   end
   object edt5: TEdit
-    Left = 184
-    Top = 176
-    Width = 121
-    Height = 21
+    Left = 200
+    Top = 160
+    Width = 289
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 10
   end
   object btn6: TButton
     Left = 488
-    Top = 208
+    Top = 192
     Width = 75
     Height = 25
     Caption = 'CETAK'
@@ -154,7 +214,7 @@ object Form8: TForm8
   object ds7: TDataSource
     DataSet = zqry7
     Left = 16
-    Top = 24
+    Top = 40
   end
   object zqry7: TZQuery
     Connection = Form2.con1
@@ -180,7 +240,7 @@ object Form8: TForm8
       'begin'
       ''
       'end.')
-    Left = 376
+    Left = 528
     Top = 88
     Datasets = <
       item
@@ -506,7 +566,7 @@ object Form8: TForm8
     CloseDataSource = False
     DataSet = zqry7
     BCDToCurrency = False
-    Left = 376
+    Left = 528
     Top = 40
   end
 end

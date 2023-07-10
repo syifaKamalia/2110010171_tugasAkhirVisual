@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus;
+  Dialogs, Menus, StdCtrls;
 
 type
   TForm10 = class(TForm)
@@ -18,6 +18,11 @@ type
     mniSEMESTER1: TMenuItem;
     mniPOIN1: TMenuItem;
     mniUSER1: TMenuItem;
+    lbl1: TLabel;
+    lbl2: TLabel;
+    lbl3: TLabel;
+    mniN1: TMenuItem;
+    mniLOGOUT1: TMenuItem;
     procedure mniWALIKELAS2Click(Sender: TObject);
     procedure mniSISWA1Click(Sender: TObject);
     procedure mniKELAS1Click(Sender: TObject);
@@ -26,6 +31,7 @@ type
     procedure mniSEMESTER1Click(Sender: TObject);
     procedure mniPOIN1Click(Sender: TObject);
     procedure mniUSER1Click(Sender: TObject);
+    procedure mniLOGOUT1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -79,6 +85,14 @@ end;
 procedure TForm10.mniUSER1Click(Sender: TObject);
 begin
 Form5.Show;
+end;
+
+procedure TForm10.mniLOGOUT1Click(Sender: TObject);
+begin
+if application.MessageBox('Yakin ingin logout?','Konfirmasi Ulang',MB_YesNo)=ID_Yes then
+begin
+form10.Close;
+end;
 end;
 
 end.

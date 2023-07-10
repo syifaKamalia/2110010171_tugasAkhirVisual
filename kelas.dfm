@@ -1,10 +1,10 @@
 object Form7: TForm7
-  Left = 358
-  Top = 125
+  Left = 360
+  Top = 147
   Width = 589
-  Height = 578
+  Height = 498
   Caption = 'Kelas'
-  Color = clBtnFace
+  Color = clAppWorkSpace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -15,31 +15,55 @@ object Form7: TForm7
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 56
-    Top = 48
-    Width = 62
-    Height = 13
+    Left = 152
+    Top = 40
+    Width = 77
+    Height = 15
     Caption = 'NAMA KELAS'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object lbl2: TLabel
-    Left = 56
-    Top = 80
-    Width = 46
-    Height = 13
+    Left = 152
+    Top = 72
+    Width = 55
+    Height = 15
     Caption = 'JURUSAN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
   end
   object edt1: TEdit
-    Left = 184
-    Top = 48
-    Width = 121
-    Height = 21
+    Left = 248
+    Top = 40
+    Width = 153
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
   end
   object edt2: TEdit
-    Left = 184
-    Top = 80
-    Width = 121
-    Height = 21
+    Left = 248
+    Top = 72
+    Width = 153
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object btn1: TButton
@@ -122,15 +146,15 @@ object Form7: TForm7
       'select * from tablekelas')
     Params = <>
     Left = 16
-    Top = 88
+    Top = 72
   end
   object frxdbdtst6: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
     DataSet = zqry6
     BCDToCurrency = False
-    Left = 336
-    Top = 32
+    Left = 536
+    Top = 24
   end
   object frxrprt6: TfrxReport
     Version = '4.12.6'
@@ -147,8 +171,8 @@ object Form7: TForm7
       'begin'
       ''
       'end.')
-    Left = 336
-    Top = 80
+    Left = 536
+    Top = 72
     Datasets = <
       item
         DataSet = frxdbdtst6

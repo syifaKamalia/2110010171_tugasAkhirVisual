@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 226
-  Top = 154
-  Width = 928
-  Height = 464
+  Left = 438
+  Top = 226
+  Width = 413
+  Height = 313
   Caption = 'Utama'
-  Color = clBtnFace
+  Color = clMedGray
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -14,36 +14,61 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 104
-    Top = 40
+    Left = 168
+    Top = 64
     Width = 54
     Height = 13
     Caption = 'USERNAME'
   end
   object lbl2: TLabel
-    Left = 104
-    Top = 80
+    Left = 168
+    Top = 136
     Width = 57
     Height = 13
     Caption = 'PASSWORD'
   end
+  object lbl3: TLabel
+    Left = 152
+    Top = 8
+    Width = 85
+    Height = 34
+    Caption = 'LOGIN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -29
+    Font.Name = 'Hack'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object edt1: TEdit
-    Left = 168
-    Top = 40
-    Width = 121
-    Height = 21
+    Left = 120
+    Top = 160
+    Width = 161
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
   end
   object edt2: TEdit
-    Left = 168
-    Top = 80
-    Width = 121
-    Height = 21
+    Left = 120
+    Top = 88
+    Width = 161
+    Height = 27
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 1
   end
   object btn1: TButton
-    Left = 168
-    Top = 112
+    Left = 160
+    Top = 224
     Width = 75
     Height = 25
     Caption = 'LOGIN'

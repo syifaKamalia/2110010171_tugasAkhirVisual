@@ -1,10 +1,10 @@
 object Form10: TForm10
-  Left = 302
-  Top = 152
+  Left = 219
+  Top = 153
   Width = 928
   Height = 480
   Caption = 'Admin'
-  Color = clBtnFace
+  Color = clSilver
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -14,6 +14,45 @@ object Form10: TForm10
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
+  object lbl1: TLabel
+    Left = 224
+    Top = 184
+    Width = 429
+    Height = 45
+    Caption = 'SMP NUSA BANGSA'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -35
+    Font.Name = 'Lucida Calligraphy'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl2: TLabel
+    Left = 360
+    Top = 240
+    Width = 130
+    Height = 16
+    Caption = 'HALAMAN ADMIN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Lucida Console'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbl3: TLabel
+    Left = 160
+    Top = 136
+    Width = 563
+    Height = 45
+    Caption = 'SISTEM INFORMASI POIN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -35
+    Font.Name = 'Lucida Calligraphy'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
   object mm1: TMainMenu
     Left = 32
     Top = 16
@@ -50,6 +89,13 @@ object Form10: TForm10
       object mniUSER1: TMenuItem
         Caption = 'USER'
         OnClick = mniUSER1Click
+      end
+      object mniN1: TMenuItem
+        Caption = '-'
+      end
+      object mniLOGOUT1: TMenuItem
+        Caption = 'LOGOUT'
+        OnClick = mniLOGOUT1Click
       end
     end
   end
