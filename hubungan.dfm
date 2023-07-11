@@ -4,7 +4,7 @@ object Form8: TForm8
   Width = 587
   Height = 574
   Caption = 'Hubungan'
-  Color = clAppWorkSpace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

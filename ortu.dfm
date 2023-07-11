@@ -4,7 +4,7 @@ object Form4: TForm4
   Width = 626
   Height = 584
   Caption = 'Orang Tua'
-  Color = clAppWorkSpace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

@@ -4,7 +4,7 @@ object Form1: TForm1
   Width = 413
   Height = 313
   Caption = 'Utama'
-  Color = clMedGray
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -16,27 +16,39 @@ object Form1: TForm1
   object lbl1: TLabel
     Left = 168
     Top = 64
-    Width = 54
-    Height = 13
+    Width = 72
+    Height = 16
     Caption = 'USERNAME'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Goudy Old Style'
+    Font.Style = []
+    ParentFont = False
   end
   object lbl2: TLabel
     Left = 168
     Top = 136
-    Width = 57
-    Height = 13
+    Width = 72
+    Height = 16
     Caption = 'PASSWORD'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Goudy Old Style'
+    Font.Style = []
+    ParentFont = False
   end
   object lbl3: TLabel
-    Left = 152
+    Left = 136
     Top = 8
-    Width = 85
-    Height = 34
+    Width = 123
+    Height = 38
     Caption = 'LOGIN'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -29
-    Font.Name = 'Hack'
+    Font.Name = 'Elephant'
     Font.Style = [fsBold]
     ParentFont = False
   end
@@ -68,10 +80,16 @@ object Form1: TForm1
   end
   object btn1: TButton
     Left = 160
-    Top = 224
-    Width = 75
-    Height = 25
+    Top = 216
+    Width = 89
+    Height = 33
     Caption = 'LOGIN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Fixedsys'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 2
     OnClick = btn1Click
   end

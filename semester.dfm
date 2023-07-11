@@ -4,7 +4,7 @@ object Form9: TForm9
   Width = 589
   Height = 585
   Caption = 'Semester'
-  Color = clAppWorkSpace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

@@ -14,11 +14,11 @@ type
     mniSEMESTER1: TMenuItem;
     mniORANGTUA1: TMenuItem;
     mniSEMESTER2: TMenuItem;
+    mniN1: TMenuItem;
+    mniLOGOUT1: TMenuItem;
     lbl1: TLabel;
     lbl2: TLabel;
     lbl3: TLabel;
-    mniN1: TMenuItem;
-    mniLOGOUT1: TMenuItem;
     procedure mniSEMESTER1Click(Sender: TObject);
     procedure mniORANGTUA1Click(Sender: TObject);
     procedure mniSEMESTER2Click(Sender: TObject);

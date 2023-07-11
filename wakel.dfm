@@ -4,7 +4,7 @@ object Form11: TForm11
   Width = 928
   Height = 480
   Caption = 'Home'
-  Color = clSilver
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -15,11 +15,11 @@ object Form11: TForm11
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 224
-    Top = 184
-    Width = 429
+    Left = 264
+    Top = 200
+    Width = 310
     Height = 45
-    Caption = 'SMP NUSA BANGSA'
+    Caption = 'SMP SMIP-1946'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -35
@@ -28,22 +28,22 @@ object Form11: TForm11
     ParentFont = False
   end
   object lbl2: TLabel
-    Left = 352
-    Top = 240
-    Width = 180
-    Height = 16
+    Left = 360
+    Top = 104
+    Width = 144
+    Height = 15
     Caption = 'HALAMAN WALI KELAS'
     Font.Charset = ANSI_CHARSET
     Font.Color = clBlack
     Font.Height = -16
-    Font.Name = 'Lucida Console'
+    Font.Name = 'Fixedsys'
     Font.Style = []
     ParentFont = False
   end
   object lbl3: TLabel
     Left = 160
     Top = 136
-    Width = 561
+    Width = 547
     Height = 45
     Caption = 'SISTEM INFORMASI POIN'
     Font.Charset = ANSI_CHARSET

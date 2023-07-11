@@ -4,7 +4,7 @@ object Form2: TForm2
   Width = 585
   Height = 602
   Caption = 'Wali Kelas'
-  Color = clAppWorkSpace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11

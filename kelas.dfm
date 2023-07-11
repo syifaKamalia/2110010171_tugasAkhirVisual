@@ -4,7 +4,7 @@ object Form7: TForm7
   Width = 589
   Height = 498
   Caption = 'Kelas'
-  Color = clAppWorkSpace
+  Color = clSkyBlue
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
